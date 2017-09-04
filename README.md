@@ -1,2 +1,5 @@
 # subleq
-A one instruction Turing Machine - SUBtract and branch if Less-than or EQual to zero
+
+Read about how it works [here](https://www.esolangs.org/wiki/Subleq).
+
+Run `node subleq.js <INPUT>` to run prog.txt with space seperated numbers as input.
