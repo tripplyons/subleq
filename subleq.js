@@ -1,7 +1,7 @@
 var fs = require('fs')
 
 var output = ""
-var input = process.argv.slice(2).map(x => parseInt(x))
+var input = process.argv.slice(3).map(x => parseInt(x))
 var currentInput = 0
 
 // takes an array of three element arrays of instructions
@@ -41,7 +41,7 @@ function subleq(instrs) {
 	console.log(output)
 }
 
-fs.readFile(__dirname + '/prog.txt', 'utf8', function(err, contents) {
+fs.readFile(__dirname + '/' + process.argv[2], 'utf8', function(err, contents) {
 	if(err) {
 		throw err
 	} else {
@@ -49,6 +49,7 @@ fs.readFile(__dirname + '/prog.txt', 'utf8', function(err, contents) {
 			.split(/\s+/)
 			.filter(x => x != '')
 			.map(x => parseInt(x))
+		
 		subleq(splitted)
 	}
 })
