@@ -4,7 +4,7 @@ var output = ""
 var input = process.argv.slice(3).map(x => parseInt(x))
 var currentInput = 0
 
-// takes an array of three element arrays of instructions
+// takes an array of instructions
 function subleq(instrs) {
 	var data = {}
 	instrs.forEach((x,i) => data[i] = x)
@@ -49,7 +49,7 @@ fs.readFile(__dirname + '/' + process.argv[2], 'utf8', function(err, contents) {
 			.split(/\s+/)
 			.filter(x => x != '')
 			.map(x => parseInt(x))
-		
+
 		subleq(splitted)
 	}
 })
